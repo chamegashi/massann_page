@@ -18,11 +18,6 @@
             <div class="text-h6">最近セブンのレンチンできる焼きサバがおいしい</div>
             <div class="text-subtitle2">プロ画: @Cafe_Raichu(twitter)</div>
           </q-card-section>
-          <!-- <q-separator />
-          <q-card-actions vertical>
-            <q-btn flat>Action 1</q-btn>
-            <q-btn flat>Action 2</q-btn>
-          </q-card-actions> -->
         </q-card>
 
       </div>      
@@ -158,6 +153,15 @@ export default {
           size: "１人",
           words: "python, vue",
           github: "https://github.com/chamegashi/hashigo"
+        },
+        {
+          title: "他のビデオ通がちょっと見えるシステム",
+          image: "img/vol7.png",
+          times: "2021/03",
+          content: "ハッカソン",
+          size: "３人",
+          words: "python, vue, twitterApi, youtubeApi",
+          github: "https://github.com/Popinpon/UECTechMate1"
         },
       ],
       companies: [
