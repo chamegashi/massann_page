@@ -1,82 +1,155 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="hHh Lpr lfl" class="bg-grey-1 text-grey-9">
 
-    <div>
-      <h2 class="text-center">massann's Page</h2>
+    <q-header elevated>
+      <q-toolbar class="glossy bg-black">
+        <!-- <q-btn @click="drawer = !drawer" flat round dense icon="menu" class="q-mr-sm" /> -->
 
-      <div class="row justify-center">
-        <img class="q-pr-md" alt="Quasar logo" src="./assets/pro.png">      
+        <q-toolbar-title>massann's Page</q-toolbar-title>
+      </q-toolbar>
+    </q-header>
 
-        <q-card class="flat bordered">
-          <q-card-section>
-            <div class="text-h5">UEC: 2017 ~ 2021</div>
-            <div class="text-h5">UEC Master's Degree: 2021 ~</div>
-          <q-separator />
-            <div class="text-h6">趣味: ゲーム, ボドゲ, カラオケ</div>
-            <div class="text-h6">好み言語: python, JS(Vue)</div>
-            <div class="text-h6">嫁ポケ: ライチュウ</div>
-            <div class="text-h6">最近セブンのレンチンできる焼きサバがおいしい</div>
-            <div class="text-subtitle2">プロ画: @Cafe_Raichu(twitter)</div>
-          </q-card-section>
-        </q-card>
+    <!-- <q-drawer v-model="drawer" show-if-above :width="200" :breakpoint="500">
+      <q-scroll-area class="fit bg-grey-1 text-grey-9">
+        <q-list padding class="menu-list">
+          <a href="#profile">
+          <q-item href="#profile" clickable v-ripple>
+            <q-item-section>
+              <img src="./assets/profile_icon.png" style="width: 35px">
+            </q-item-section>
+            <q-item-section class="text-h6 text-weight-bold text-grey-9">
+              Profile
+            </q-item-section>
+          </q-item>
+          </a>
 
-      </div>      
-    </div>
+          <q-item href="#skill" clickable v-ripple>
+            <q-item-section avatar>
+              <img src="./assets/skill_icon.png" style="width: 35px">
+            </q-item-section>
+            <q-item-section class="text-h6 text-weight-bold">
+              Skill
+            </q-item-section>
+          </q-item>
 
-    <div class="q-pt-md">
-      <h2 class="text-center">開発してたこと</h2>
+          <q-item clickable v-ripple>
+            <q-item-section avatar>
+              <img src="./assets/PC_icon.png" style="width: 35px">
+            </q-item-section>
+            <q-item-section class="text-h6 text-weight-bold">
+              Products
+            </q-item-section>
+          </q-item>
 
-      <div class="q-pa-md row items-start q-gutter-md justify-center">
-        <div v-for="exprerience in expreriences" v-bind:key="exprerience.title">
-          <Cord
-            v-bind="exprerience"
-          />
-        </div>
-      </div>
-    </div>
+          <q-item clickable v-ripple>
+            <q-item-section avatar>
+              <img src="./assets/work_icon.png" style="width: 35px">
+            </q-item-section>
+            <q-item-section class="text-h6 text-weight-bold">
+              Works
+            </q-item-section>
+          </q-item>
 
-    <div class="q-pt-md">
-      <h2 class="text-center">業務経験</h2>
+        </q-list>
+      </q-scroll-area>
+    </q-drawer> -->
 
-      <div class="q-pa-md row items-start q-gutter-md justify-center">
-        <div v-for="company in companies" v-bind:key="company.company">
-          <CompanyCord
-            v-bind="company"
-          />
-        </div>
-      </div>
-    </div>
+      <q-page-container>
+        <q-page>
+          <div>
+            <h1 class="text-center q-py-xl q-mb-md text-weight-bolder">massann's Page</h1>
+          </div>
 
-    <!-- <div class="q-pt-md">
-      <h2 class="text-center">その他細々した活動</h2>
+          <div name="profile" class="q-my-xl q-pt-xl flex justify-center row">
+            <img class="q-pr-lg" src="./assets/profile_icon.png" style="width: 80px">
+            <span class="text-h2 text-center text-weight-bold">Profile</span>
+          </div>
 
-      <div class="q-pa-md row items-start q-gutter-md justify-center">
-        <div v-for="exprerience in expreriences" v-bind:key="exprerience.title">
-          <Cord
-            v-bind="exprerience"
-          />
-        </div>
-      </div>
-    </div> -->
+          <div>
+            <div class="row justify-center text-text-grey-9">
+              <img class="q-mx-xl q-px-xl" src="./assets/pro.png">
+              <div class="flex justify-center" style="width:35%">
+                <div class="text-h5 full-width">学歴: UEC 2017 ~ 2021, UEC's master 2021 ~</div>
+                <div class="text-h5 full-width">好みの言語: python, JS(Vue)</div>
+                <div class="text-h5 full-width">好みの CSS FW: tailwind</div>
+                <div class="text-h5 full-width">就きたい職: Web フロントエンジニア</div>
+                <div class="text-h5 full-width">嫁ポケ: ライチュウ</div>
+                <div class="text-subtitle2 full-width">プロ画: @Cafe_Raichu(twitter)</div>
+              </div>
+            </div>
+          </div>
 
-    <div class="q-pt-md bg-black text-white">
-      <p class="q-mb-none q-pr-md text-right">Copyright © 2021 massann All Rights Reserved.</p>
-    </div> 
+          <div name="skill" class="q-my-xl q-pt-xl flex justify-center row">
+            <img class="q-pr-md" src="./assets/skill_icon.png" style="width: 80px">
+            <span class="text-h2 text-center text-weight-bold">Skill</span>
+          </div>
+
+          <div class="flex justify-center">
+            <Radar v-for="radar in radarData" :key="radar" v-bind="radar" style="width: 25%"/>
+          </div>
+
+          <div class="q-mt-xl items-start q-gutter-md border flex justify-center">
+            <div class="q-px-lg q-py-md rounded-borders" style="border:solid; border-color: #cccccc; border-width: 1px; width:35%">
+                <div class="text-h6 full-width q-py-xs">5 - 趣味や業務で頻繁に使用する</div>
+                <div class="text-h6 full-width q-py-xs">4 - 趣味や業務でよく使用する</div>
+                <div class="text-h6 full-width q-py-xs">3 - ある程度使用できる</div>
+                <div class="text-h6 full-width q-py-xs">2 - 興味はあるが、あまりわからない</div>
+                <div class="text-h6 full-width q-py-xs">1 - 興味はあるが、まったくわからない</div>
+            </div>
+          </div>
 
 
+          <div name="products" class="q-my-xl q-pt-xl flex justify-center row">
+            <img class="q-pr-md" src="./assets/PC_icon.png" style="width: 80px">
+            <span class="text-h2 text-center text-weight-bold">Products</span>
+          </div>
+
+          <div>
+            <div class="q-pa-md row items-start q-gutter-md justify-center">
+              <div v-for="exprerience in expreriences" v-bind:key="exprerience.title">
+                <Cord
+                  v-bind="exprerience"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div name="works" class="q-my-xl q-pt-xl flex justify-center row">
+            <img class="q-pr-md" src="./assets/work_icon.png" style="width: 80px">
+            <span class="text-h2 text-center text-weight-bold">Works</span>
+          </div>
+
+          <div>
+            <div class="q-pa-md row items-start q-gutter-md justify-center">
+              <div v-for="company in companies" v-bind:key="company.company">
+                <CompanyCord
+                  v-bind="company"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="q-pt-md q-mt-xl bg-black text-white">
+            <p class="q-mb-none q-pr-md text-right">Copyright © 2021 massann All Rights Reserved.</p>
+          </div> 
+
+        </q-page>
+      </q-page-container>
   </q-layout>
 </template>
 
 <script>
 import Cord from './components/Card.vue'
 import CompanyCord from './components/CompanyCard.vue'
+import Radar from './components/Radar.vue'
 
 export default {
   name: 'LayoutDefault',
 
   components: {
     Cord,
-    CompanyCord
+    CompanyCord,
+    Radar
   },
 
   data () {
@@ -155,7 +228,7 @@ export default {
           github: "https://github.com/chamegashi/hashigo"
         },
         {
-          title: "他のビデオ通がちょっと見えるシステム",
+          title: "複数配信がちょっと見えるシステム",
           image: "img/vol7.png",
           times: "2021/03",
           content: "ハッカソン",
@@ -179,7 +252,28 @@ export default {
           words: "php, JS",
           site: "https://www.datapacific.co.jp/index.html"
         },
-      ]
+      ],
+      radarData: [
+        {
+          label: "frontend",
+          labels: ["Vue.js", "JS/TS", "CSS FW", "React", "jest", "WebSecurity"],
+          radarData: [5, 4, 4, 1, 2, 2],
+          color: ["255", "0", "0"]
+        },
+        {
+          label: "backend",
+          labels: ["python", "flask", "Rails", "php", "debian", "SQL"],
+          radarData: [5, 4, 1, 4, 3, 3],
+          color: ["0", "180", "0"]
+        },
+        {
+          label: "devOption",
+          labels: ["git", "docker", "AWS", "Firebase", "npm", "webpack"],
+          radarData: [5, 2, 3, 1, 4, 3],
+          color: ["0", "0", "255"]
+        }
+      ],
+      drawer: false,
     }
   }
 }
