@@ -101,6 +101,28 @@ export default {
           dialogText: "友人と参加したハッカソンで作成したシステム。ハッカソンのお題は「オンラインイベントがより楽しくなるようなもの」。まっさんのグループでは、オンラインイベントの別枠配信の状況が少しわかるようなシステムを作成。zoom の画面キャプチャや、youtubeAPI, twitterAPI を用いて情報を収集し、一つの web サイトに集約した。",
           dialogTech: "python, flask, Vue, tailwind, twitterAPI, youtubeAPI",
         },
+        {
+          title: "旅行プラン投稿アプリ",
+          image: "img/notfound.png",
+          times: "2021/09",
+          content: "ハッカソン",
+          size: "５人",
+          words: "React, Next",
+          github: "https://github.com/averak/DeNA-hack-2021",
+          dialogText: "",
+          dialogTech: "React, Next",
+        },
+        {
+          title: "カラオケ配信検索アプリ",
+          image: "img/notfound.png",
+          times: "2021/10",
+          content: "個人開発",
+          size: "１人",
+          words: "React, Next",
+          github: "https://github.com/chamegashi/karaokeSearch",
+          dialogText: "",
+          dialogTech: "React, Next, python",
+        },
       ],
       interns: [
         {
@@ -127,6 +149,14 @@ export default {
           size: "個人",
           words: "Vue",
         },
+        {
+          company: "クックパッド株式会社",
+          content: "講義や、IOS開発のOJT",
+          times: "2021/9",
+          period: "１０日間",
+          size: "個人",
+          words: "React, IOS, SwiftUI",
+        },
       ],
       companies: [
         {
@@ -148,7 +178,7 @@ export default {
         {
           label: "frontend",
           labels: ["Vue.js", "JS/TS", "CSS FW", "React", "jest", "WebSecurity"],
-          radarData: [5, 4, 4, 2, 1, 2],
+          radarData: [5, 4, 4, 3, 1, 2],
           color: ["255", "0", "0"]
         },
         {
@@ -160,7 +190,7 @@ export default {
         {
           label: "devOption",
           labels: ["git", "docker", "AWS", "Firebase", "npm", "webpack"],
-          radarData: [5, 2, 3, 1, 4, 3],
+          radarData: [5, 2, 2, 1, 4, 3],
           color: ["0", "0", "255"]
         }
       ],
